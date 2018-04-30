@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>observer.demo.weather.CurrentConditionDisplay</OriginalElement>
+  <nodes>
+    <node x="76.67534722222229" y="443.0">observer.demo.weather.StatisticsDisplay</node>
+    <node x="1037.1319444444443" y="467.0">observer.demo.weather.CurrentConditionDisplay</node>
+    <node x="397.52951388888886" y="258.0">observer.demo.weather.Observer</node>
+    <node x="116.0" y="1106.0">observer.demo.weather.WeatherData</node>
+    <node x="27.0" y="953.0">observer.demo.weather.Subject</node>
+    <node x="440.91145833333326" y="467.0">observer.demo.weather.HeatIndexDisplay</node>
+    <node x="510.0" y="809.0">observer.demo.weather.WeatherStation</node>
+    <node x="882.3819444444443" y="258.0">observer.demo.weather.DisplayElement</node>
+    <node x="749.9114583333333" y="467.0">observer.demo.weather.ForecastDisplay</node>
+  </nodes>
+  <notes>
+    <note x="1205.7569444444443" y="271.5">
+      <node>observer.demo.weather.CurrentConditionDisplay</node>
+      <value>当前状况布告板</value>
+      <edge>
+        <point x="104.0" y="-88.5" />
+        <point x="1297.1319444444443" y="423.0" />
+        <point x="1261.2569444444443" y="423.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="262.5">
+      <node>observer.demo.weather.StatisticsDisplay</node>
+      <value>统计布告板\n布告板(显示目前天气状况给用户看)</value>
+      <edge>
+        <point x="-86.66666666666674" y="-112.5" />
+        <point x="120.00868055555554" y="423.0" />
+        <point x="115.5" y="423.0" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="352.02951388888886" y="0.0">
+      <node>observer.demo.weather.Observer</node>
+      <value>观察者接口\n所有潜在的观察者必须实现观察者接口\n该接口只有update()一个方法\n当主题状态改变时它被调用\n\n具体的观察者可以是实现此接口的任意类\n观察者必须注册具体主题  以便接收更新\n\n对应当前实现\n所有的气象组件都要实现此观察者接口\n这样  当主题要通知观察者时  就可以找这个共同接口</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="104.0" />
+      </edge>
+    </note>
+    <note x="311.0" y="981.5">
+      <node>observer.demo.weather.WeatherData</node>
+      <value>追踪来自气象站的数据\n并更新布告板</value>
+      <edge>
+        <point x="78.25" y="-136.5" />
+        <point x="350.75" y="1081.0" />
+        <point x="386.0" y="1081.0" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="713.0">
+      <node>observer.demo.weather.Subject</node>
+      <value>主题接口\n对象使用此接口注册为观察者\n或者把自己从观察者中删除\n每个主题可以有多个观察者\n\n观察者模式=主题(subject)+观察者(observer)\n观察者模式：\n定义了对象之间的一对多的依赖\n这样一来  当一个对象改变状态时\n它的所有依赖者都会收到通知并自动更新</value>
+      <edge>
+        <point x="0.0" y="-51.5" />
+        <point x="0.0" y="95.0" />
+      </edge>
+    </note>
+    <note x="266.52951388888886" y="271.5">
+      <node>observer.demo.weather.HeatIndexDisplay</node>
+      <value>酷热指数布告板</value>
+      <edge>
+        <point x="-96.33333333333326" y="-88.5" />
+        <point x="489.078125" y="373.0" />
+        <point x="322.02951388888886" y="373.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="506.0" y="713.0">
+      <node>observer.demo.weather.WeatherStation</node>
+      <value>测试类(气象站)\n获取实际气象数据的物理装置</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="845.3819444444443" y="81.0">
+      <node>observer.demo.weather.DisplayElement</node>
+      <value>布告板公用接口\n布告板只需要实现display()方法</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="1050.3819444444443" y="271.5">
+      <node>observer.demo.weather.ForecastDisplay</node>
+      <value>预测布告板</value>
+      <edge>
+        <point x="85.66666666666669" y="-88.5" />
+        <point x="964.078125" y="423.0" />
+        <point x="1092.8819444444443" y="423.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="observer.demo.weather.StatisticsDisplay" target="observer.demo.weather.Observer">
+      <point x="0.0" y="-112.5" />
+      <point x="206.67534722222229" y="383.0" />
+      <point x="428.40451388888886" y="383.0" />
+      <point x="-92.625" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.StatisticsDisplay" target="observer.demo.weather.DisplayElement">
+      <point x="86.66666666666674" y="-112.5" />
+      <point x="293.342013888889" y="393.0" />
+      <point x="900.8819444444443" y="393.0" />
+      <point x="-55.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.HeatIndexDisplay" target="observer.demo.weather.DisplayElement">
+      <point x="96.33333333333337" y="-88.5" />
+      <point x="681.7447916666666" y="403.0" />
+      <point x="937.8819444444443" y="403.0" />
+      <point x="-18.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.HeatIndexDisplay" target="observer.demo.weather.Observer">
+      <point x="0.0" y="-88.5" />
+      <point x="585.4114583333333" y="363.0" />
+      <point x="490.15451388888886" y="363.0" />
+      <point x="-30.875" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.CurrentConditionDisplay" target="observer.demo.weather.DisplayElement">
+      <point x="0.0" y="-88.5" />
+      <point x="1193.1319444444443" y="333.0" />
+      <point x="1011.8819444444443" y="333.0" />
+      <point x="55.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.CurrentConditionDisplay" target="observer.demo.weather.Observer">
+      <point x="-104.0" y="-88.5" />
+      <point x="1089.1319444444443" y="343.0" />
+      <point x="613.6545138888889" y="343.0" />
+      <point x="92.625" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.WeatherData" target="observer.demo.weather.Subject">
+      <point x="-78.25" y="-136.5" />
+      <point x="194.25" y="1081.0" />
+      <point x="159.0" y="1081.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="observer.demo.weather.ForecastDisplay" target="observer.demo.weather.Observer">
+      <point x="-85.66666666666669" y="-88.5" />
+      <point x="792.7447916666665" y="353.0" />
+      <point x="551.9045138888889" y="353.0" />
+      <point x="30.875" y="27.5" />
+    </edge>
+    <edge source="observer.demo.weather.ForecastDisplay" target="observer.demo.weather.DisplayElement">
+      <point x="0.0" y="-88.5" />
+      <point x="878.4114583333333" y="413.0" />
+      <point x="974.8819444444443" y="413.0" />
+      <point x="18.5" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9757795503988396" x="941.2826991676577" y="1004.9126783590964" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

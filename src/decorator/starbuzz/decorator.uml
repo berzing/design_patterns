@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>decorator.starbuzz.Beverage</OriginalElement>
+  <nodes>
+    <node x="0.0" y="430.0">decorator.starbuzz.Whip</node>
+    <node x="0.0" y="683.0">decorator.starbuzz.StarbuzzCoffee</node>
+    <node x="667.1592592592593" y="430.0">decorator.starbuzz.Soy</node>
+    <node x="862.0" y="300.0">decorator.starbuzz.Espresso</node>
+    <node x="74.01388888888891" y="300.0">decorator.starbuzz.HouseBlend</node>
+    <node x="598.0" y="312.5">decorator.starbuzz.CondimentDecorator</node>
+    <node x="915.0" y="430.0">decorator.starbuzz.Mocha</node>
+    <node x="247.0138888888889" y="300.0">decorator.starbuzz.Decaf</node>
+    <node x="415.0138888888889" y="300.0">decorator.starbuzz.DarkRoast</node>
+    <node x="482.7888888888889" y="150.0">decorator.starbuzz.Beverage</node>
+  </nodes>
+  <notes>
+    <note x="8.013888888888914" y="326.0">
+      <node>decorator.starbuzz.Whip</node>
+      <value>奶泡</value>
+      <edge>
+        <point x="-46.0" y="-65.0" />
+        <point x="46.0" y="410.0" />
+        <point x="31.013888888888914" y="410.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="61.0" y="605.0">
+      <node>decorator.starbuzz.StarbuzzCoffee</node>
+      <value>测试类</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="796.0" y="326.0">
+      <node>decorator.starbuzz.Soy</node>
+      <value>豆浆</value>
+      <edge>
+        <point x="46.0" y="-65.0" />
+        <point x="805.1592592592593" y="410.0" />
+        <point x="819.0" y="410.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="937.0" y="176.0">
+      <node>decorator.starbuzz.Espresso</node>
+      <value>浓缩咖啡</value>
+      <edge>
+        <point x="37.0" y="-40.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="63.263888888888914" y="176.0">
+      <node>decorator.starbuzz.HouseBlend</node>
+      <value>综合特调咖啡</value>
+      <edge>
+        <point x="-38.25" y="-40.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="670.5388888888889" y="176.0">
+      <node>decorator.starbuzz.CondimentDecorator</node>
+      <value>调料抽象类(装饰者类)</value>
+      <edge>
+        <point x="44.5" y="-27.5" />
+        <point x="731.5" y="280.0" />
+        <point x="747.0388888888889" y="280.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="1030.0" y="326.0">
+      <node>decorator.starbuzz.Mocha</node>
+      <value>摩卡</value>
+      <edge>
+        <point x="46.0" y="-65.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="248.0138888888889" y="176.0">
+      <node>decorator.starbuzz.Decaf</node>
+      <value>脱因咖啡</value>
+      <edge>
+        <point x="-37.0" y="-40.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="390.7888888888889" y="176.0">
+      <node>decorator.starbuzz.DarkRoast</node>
+      <value>深焙咖啡</value>
+      <edge>
+        <point x="-37.0" y="-40.0" />
+        <point x="452.0138888888889" y="250.0" />
+        <point x="426.7888888888889" y="250.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="389.2888888888889" y="0.0">
+      <node>decorator.starbuzz.Beverage</node>
+      <value>饮料抽象类\n\n装饰者模式\n动态地将责任附加到对象上\n若要扩展功能  装饰者提供了比继承更有弹性的替代方案</value>
+      <edge>
+        <point x="0.0" y="-40.0" />
+        <point x="0.0" y="50.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="decorator.starbuzz.Whip" target="decorator.starbuzz.CondimentDecorator">
+      <point x="46.0" y="-65.0" />
+      <point x="138.0" y="410.0" />
+      <point x="627.6666666666667" y="410.0" />
+      <point x="-59.333333333333314" y="27.5" />
+    </edge>
+    <edge source="decorator.starbuzz.DarkRoast" target="decorator.starbuzz.Beverage">
+      <point x="37.0" y="-40.0" />
+      <point x="526.0138888888889" y="280.0" />
+      <point x="563.2888888888889" y="280.0" />
+      <point x="0.0" y="40.0" />
+    </edge>
+    <edge source="decorator.starbuzz.CondimentDecorator" target="decorator.starbuzz.Beverage">
+      <point x="-44.5" y="-27.5" />
+      <point x="642.5" y="280.0" />
+      <point x="595.4888888888889" y="280.0" />
+      <point x="32.200000000000045" y="40.0" />
+    </edge>
+    <edge source="decorator.starbuzz.Soy" target="decorator.starbuzz.CondimentDecorator">
+      <point x="-46.0" y="-65.0" />
+      <point x="713.1592592592593" y="410.0" />
+      <point x="687.0" y="410.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="decorator.starbuzz.Espresso" target="decorator.starbuzz.Beverage">
+      <point x="-37.0" y="-40.0" />
+      <point x="899.0" y="270.0" />
+      <point x="627.6888888888889" y="270.0" />
+      <point x="64.39999999999998" y="40.0" />
+    </edge>
+    <edge source="decorator.starbuzz.Decaf" target="decorator.starbuzz.Beverage">
+      <point x="37.0" y="-40.0" />
+      <point x="358.0138888888889" y="270.0" />
+      <point x="531.0888888888888" y="270.0" />
+      <point x="-32.200000000000045" y="40.0" />
+    </edge>
+    <edge source="decorator.starbuzz.Mocha" target="decorator.starbuzz.CondimentDecorator">
+      <point x="-46.0" y="-65.0" />
+      <point x="961.0" y="400.0" />
+      <point x="746.3333333333334" y="400.0" />
+      <point x="59.33333333333337" y="27.5" />
+    </edge>
+    <edge source="decorator.starbuzz.HouseBlend" target="decorator.starbuzz.Beverage">
+      <point x="38.25" y="-40.0" />
+      <point x="188.7638888888889" y="260.0" />
+      <point x="498.8888888888889" y="260.0" />
+      <point x="-64.39999999999998" y="40.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="542.0" y="363.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

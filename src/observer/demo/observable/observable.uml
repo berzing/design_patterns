@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>observer.demo.observable.CurrentConditionsDisplay</OriginalElement>
+  <nodes>
+    <node x="252.74999999999994" y="384.0">java.util.Observer</node>
+    <node x="697.5" y="843.0">observer.demo.observable.WeatherStation</node>
+    <node x="285.99999999999994" y="555.0">observer.demo.observable.HeatIndexDisplay</node>
+    <node x="184.25" y="1232.0">observer.demo.observable.WeatherData</node>
+    <node x="0.0" y="543.0">observer.demo.observable.ForecastDisplay</node>
+    <node x="858.0" y="531.0">observer.demo.observable.CurrentConditionsDisplay</node>
+    <node x="376.0" y="861.0">java.util.Observable</node>
+    <node x="678.9999999999999" y="384.0">observer.demo.observable.DisplayElement</node>
+    <node x="572.0" y="519.0">observer.demo.observable.StatisticsDisplay</node>
+  </nodes>
+  <notes>
+    <note x="189.74999999999994" y="0.0">
+      <node>java.util.Observer</node>
+      <value>观察者接口\n\nupdate()方法是提供给主题调用的！\n在此处\nupdate()方法会在主题WeatherData的\nmeasurementsChanged()方法中的\nnotifyObservers()方法中被调用\n\nupdate()方法有两个参数\nObservable,Object\n1.Observable是主题  可以让观察者知道是哪个主题通知他的\n2.Object是传入\"可观察者(主题)\"第二种通知方式\nnotifyObservers(arg)的数据对象  如果没有就传null\n\n我们推荐使用\"push\"方式传递数据！！！！\n如果你想push数据给观察者  你可以将数据当做数据对象\n传送给notifyObservers(arg)方法\n否则  观察者必须从可观察者对象中pull数据</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="167.0" />
+      </edge>
+    </note>
+    <note x="758.5" y="765.0">
+      <node>observer.demo.observable.WeatherStation</node>
+      <value>测试类</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="944.5">
+      <node>observer.demo.observable.WeatherData</node>
+      <value>要想使用java实现观察者模式\n我们只需要继承java.util中的类Observable即可\n\n现在WeatherData就是我们之前的\"主题\"(subject)\n从现在起  我们也可以称之为\"可观察者\"(Observable)\n在这里我们不需要提供之前的主题方法：\nregister(),remove(),notifyObservers()\n因为我们已经从超类Observable继承了这些方法</value>
+      <edge>
+        <point x="-78.25" y="-88.5" />
+        <point x="262.5" y="1207.0" />
+        <point x="178.0" y="1207.0" />
+        <point x="0.0" y="77.0" />
+      </edge>
+    </note>
+    <note x="354.5" y="765.0">
+      <node>java.util.Observable</node>
+      <value>Observable主题\n类Observable追踪所有的观察者  并通知他们</value>
+      <edge>
+        <point x="0.0" y="-160.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="1007.0555555555555" y="397.5">
+      <node>observer.demo.observable.CurrentConditionsDisplay</node>
+      <value>当前状况布告板</value>
+      <edge>
+        <point x="102.0" y="-88.5" />
+        <point x="1113.0" y="499.0" />
+        <point x="1062.5555555555557" y="499.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="658.4999999999999" y="144.0">
+      <node>observer.demo.observable.DisplayElement</node>
+      <value>该接口用于展示信息\n所有布告板都需要实现该接口</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="observer.demo.observable.HeatIndexDisplay" target="java.util.Observer">
+      <point x="-66.5" y="-64.5" />
+      <point x="-33.25" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.ForecastDisplay" target="observer.demo.observable.DisplayElement">
+      <point x="66.5" y="-76.5" />
+      <point x="199.5" y="489.0" />
+      <point x="697.4999999999999" y="489.0" />
+      <point x="-55.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.WeatherData" target="java.util.Observable">
+      <point x="78.25" y="-88.5" />
+      <point x="419.0" y="1207.0" />
+      <point x="503.5" y="1207.0" />
+      <point x="0.0" y="160.5" />
+    </edge>
+    <edge source="observer.demo.observable.CurrentConditionsDisplay" target="observer.demo.observable.DisplayElement">
+      <point x="0.0" y="-88.5" />
+      <point x="1011.0" y="459.0" />
+      <point x="808.4999999999999" y="459.0" />
+      <point x="55.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.StatisticsDisplay" target="java.util.Observer">
+      <point x="-66.50000000000006" y="-100.5" />
+      <point x="638.4999999999999" y="479.0" />
+      <point x="418.99999999999994" y="479.0" />
+      <point x="33.25" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.CurrentConditionsDisplay" target="java.util.Observer">
+      <point x="-102.0" y="-88.5" />
+      <point x="909.0" y="469.0" />
+      <point x="485.49999999999994" y="469.0" />
+      <point x="99.75" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.StatisticsDisplay" target="observer.demo.observable.DisplayElement">
+      <point x="66.49999999999994" y="-100.5" />
+      <point x="18.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.HeatIndexDisplay" target="observer.demo.observable.DisplayElement">
+      <point x="66.5" y="-64.5" />
+      <point x="485.49999999999994" y="499.0" />
+      <point x="734.4999999999999" y="499.0" />
+      <point x="-18.5" y="27.5" />
+    </edge>
+    <edge source="observer.demo.observable.ForecastDisplay" target="java.util.Observer">
+      <point x="-66.5" y="-76.5" />
+      <point x="66.5" y="479.0" />
+      <point x="285.99999999999994" y="479.0" />
+      <point x="-99.75" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0192442267319803" x="538.2897356676966" y="363.57947133539307" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
