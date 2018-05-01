@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>factory.simple_factory.CheesePizza</OriginalElement>
+  <nodes>
+    <node x="679.0" y="591.0">factory.simple_factory.PizzaTestDrive</node>
+    <node x="364.0" y="413.0">factory.simple_factory.ClamPizza</node>
+    <node x="172.0" y="413.0">factory.simple_factory.PepperoniPizza</node>
+    <node x="525.0" y="413.0">factory.simple_factory.CheesePizza</node>
+    <node x="227.75" y="114.0">factory.simple_factory.Pizza</node>
+    <node x="0.0" y="413.0">factory.simple_factory.VeggiePizza</node>
+    <node x="57.0" y="609.0">factory.simple_factory.PizzaStore</node>
+    <node x="419.0" y="609.0">factory.simple_factory.SimplePizzaFactory</node>
+  </nodes>
+  <notes>
+    <note x="740.0" y="513.0">
+      <node>factory.simple_factory.PizzaTestDrive</node>
+      <value>测试类</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="264.75" y="0.0">
+      <node>factory.simple_factory.Pizza</node>
+      <value>这是工厂的产品：比萨\n我们把披萨定义为抽象类\n这些实现可以被覆盖</value>
+      <edge>
+        <point x="0.0" y="-124.5" />
+        <point x="0.0" y="32.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="513.0">
+      <node>factory.simple_factory.PizzaStore</node>
+      <value>这是工厂的客户\nPizzaStore现在通过SimplePizzaFactory取得披萨实例</value>
+      <edge>
+        <point x="0.0" y="-52.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="445.0" y="513.0">
+      <node>factory.simple_factory.SimplePizzaFactory</node>
+      <value>创建披萨的工厂\n工厂方法通常声明为静态</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="factory.simple_factory.PepperoniPizza" target="factory.simple_factory.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="258.0" y="393.0" />
+      <point x="316.625" y="393.0" />
+      <point x="-29.625" y="124.5" />
+    </edge>
+    <edge source="factory.simple_factory.CheesePizza" target="factory.simple_factory.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="602.0" y="383.0" />
+      <point x="435.125" y="383.0" />
+      <point x="88.875" y="124.5" />
+    </edge>
+    <edge source="factory.simple_factory.VeggiePizza" target="factory.simple_factory.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="76.0" y="383.0" />
+      <point x="257.375" y="383.0" />
+      <point x="-88.875" y="124.5" />
+    </edge>
+    <edge source="factory.simple_factory.ClamPizza" target="factory.simple_factory.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="434.5" y="393.0" />
+      <point x="375.875" y="393.0" />
+      <point x="29.625" y="124.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="520.5" y="416.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
