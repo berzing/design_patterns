@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>factory.factory_method.ChicagoPizzaStore</OriginalElement>
+  <nodes>
+    <node x="838.75" y="676.0">factory.factory_method.Pizza</node>
+    <node x="0.0" y="480.0">factory.factory_method.ChicagoPizzaStore</node>
+    <node x="450.99999999999994" y="995.0">factory.factory_method.ChicagoStylePepperoniPizza</node>
+    <node x="210.0" y="1007.5">factory.factory_method.NYStylePepperoniPizza</node>
+    <node x="1439.0" y="995.0">factory.factory_method.ChicagoStyleVeggiePizza</node>
+    <node x="0.0" y="1198.0">factory.factory_method.PizzaTestDrive</node>
+    <node x="306.5" y="480.0">factory.factory_method.NYPizzaStore</node>
+    <node x="1691.0" y="1007.5">factory.factory_method.NYStyleCheesePizza</node>
+    <node x="964.0" y="995.0">factory.factory_method.ChicagoStyleCheesePizza</node>
+    <node x="1218.0" y="1007.5">factory.factory_method.NYStyleVeggiePizza</node>
+    <node x="723.0" y="995.0">factory.factory_method.ChicagoStyleClamPizza</node>
+    <node x="0.0" y="1007.5">factory.factory_method.NYStyleClamPizza</node>
+    <node x="53.75000000000003" y="313.5">factory.factory_method.PizzaStore</node>
+  </nodes>
+  <notes>
+    <note x="780.25" y="580.0">
+      <node>factory.factory_method.Pizza</node>
+      <value>产品类\n工厂生产产品  对PizzaStore类来说  产品就是Pizza</value>
+      <edge>
+        <point x="0.0" y="-124.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="61.0" y="1120.0">
+      <node>factory.factory_method.PizzaTestDrive</node>
+      <value>测试类</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="288.75" y="276.0">
+      <node>factory.factory_method.NYPizzaStore</node>
+      <value>具体创建者\n能够产生具体产品的类称为具体创建者\n\ncreatePizza()方法就是工厂方法\n用来制造产品\n\n因为每个加盟店都有自己的PizzaStore子类\n所以可以用实现createPizza()方法创建自己风味的披萨</value>
+      <edge>
+        <point x="53.75" y="-27.5" />
+        <point x="0.0" y="77.0" />
+      </edge>
+    </note>
+    <note x="5.0" y="786.5">
+      <node>factory.factory_method.NYStyleClamPizza</node>
+      <value>具体的产品</value>
+      <edge>
+        <point x="-47.5" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="27.75000000000003" y="0.0">
+      <node>factory.factory_method.PizzaStore</node>
+      <value>抽象创建者类\n它定义了一个\"抽象工厂方法\"\n让子类实现此方法制造产品\n\n创建者通常会包含依赖于抽象产品的代码\n而这些抽象产品由子类制造\n创建者不需要真的知道在制造哪种具体产品\n\n工厂方法模式：\n定义了一个创建对象的接口\n但由子类决定要实例化的类是哪一个\n工厂方法让类把实例化推迟到子类</value>
+      <edge>
+        <point x="0.0" y="-39.5" />
+        <point x="0.0" y="113.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="factory.factory_method.ChicagoPizzaStore" target="factory.factory_method.PizzaStore">
+      <point x="0.0" y="-27.5" />
+      <point x="-53.75" y="39.5" />
+    </edge>
+    <edge source="factory.factory_method.ChicagoStyleVeggiePizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-40.0" />
+      <point x="1555.0" y="955.0" />
+      <point x="1031.3125" y="955.0" />
+      <point x="74.0625" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.NYStyleCheesePizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="1792.5" y="945.0" />
+      <point x="1060.9375" y="945.0" />
+      <point x="103.6875" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.NYPizzaStore" target="factory.factory_method.PizzaStore">
+      <point x="-53.75" y="-27.5" />
+      <point x="360.25" y="455.0" />
+      <point x="215.00000000000003" y="455.0" />
+      <point x="53.75" y="39.5" />
+    </edge>
+    <edge source="factory.factory_method.NYStylePepperoniPizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="320.5" y="955.0" />
+      <point x="883.1875" y="955.0" />
+      <point x="-74.0625" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.NYStyleVeggiePizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-27.5" />
+      <point x="1318.5" y="965.0" />
+      <point x="1001.6875" y="965.0" />
+      <point x="44.4375" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.ChicagoStyleClamPizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-40.0" />
+      <point x="833.5" y="975.0" />
+      <point x="942.4375" y="975.0" />
+      <point x="-14.8125" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.ChicagoStyleCheesePizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-40.0" />
+      <point x="1081.0" y="975.0" />
+      <point x="972.0625" y="975.0" />
+      <point x="14.8125" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.NYStyleClamPizza" target="factory.factory_method.Pizza">
+      <point x="47.5" y="-27.5" />
+      <point x="142.5" y="945.0" />
+      <point x="853.5625" y="945.0" />
+      <point x="-103.6875" y="124.5" />
+    </edge>
+    <edge source="factory.factory_method.ChicagoStylePepperoniPizza" target="factory.factory_method.Pizza">
+      <point x="0.0" y="-40.0" />
+      <point x="577.0" y="965.0" />
+      <point x="912.8125" y="965.0" />
+      <point x="-44.4375" y="124.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9700844390832327" x="651.1770703805024" y="691.4057448395922" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
