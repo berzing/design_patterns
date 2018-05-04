@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>factory.abstract_factory.BlackOlives</OriginalElement>
+  <nodes>
+    <node x="679.5" y="1858.0">factory.abstract_factory.Clams</node>
+    <node x="1670.0" y="1517.0">factory.abstract_factory.PizzaStore</node>
+    <node x="187.0" y="1963.0">factory.abstract_factory.ReggianoCheese</node>
+    <node x="374.0" y="1963.0">factory.abstract_factory.ParmesanCheese</node>
+    <node x="438.25" y="483.0">factory.abstract_factory.ChicagoPizzaIngredientFactory</node>
+    <node x="748.0" y="1758.0">factory.abstract_factory.Mushroom</node>
+    <node x="1723.75" y="1646.0">factory.abstract_factory.NYPizzaStore</node>
+    <node x="561.0" y="1758.0">factory.abstract_factory.RedPepper</node>
+    <node x="1078.5" y="1858.0">factory.abstract_factory.Sauce</node>
+    <node x="773.0" y="1963.0">factory.abstract_factory.FrozenClams</node>
+    <node x="374.0" y="1758.0">factory.abstract_factory.BlackOlives</node>
+    <node x="561.0" y="1643.0">factory.abstract_factory.Veggies</node>
+    <node x="0.0" y="2141.0">factory.abstract_factory.PizzaTestDrive</node>
+    <node x="1172.0" y="1963.0">factory.abstract_factory.PlumTomatoSauce</node>
+    <node x="678.0" y="1217.0">factory.abstract_factory.VeggiePizza</node>
+    <node x="187.0" y="1858.0">factory.abstract_factory.Cheese</node>
+    <node x="586.0" y="1963.0">factory.abstract_factory.FreshClams</node>
+    <node x="261.0" y="258.0">factory.abstract_factory.PizzaIngredientFactory</node>
+    <node x="1571.0" y="1963.0">factory.abstract_factory.ThickCrustDough</node>
+    <node x="1017.0" y="1217.0">factory.abstract_factory.CheesePizza</node>
+    <node x="1122.0" y="1758.0">factory.abstract_factory.Onion</node>
+    <node x="935.0" y="1758.0">factory.abstract_factory.Spinach</node>
+    <node x="1438.25" y="1646.0">factory.abstract_factory.ChicagoPizzaStore</node>
+    <node x="187.0" y="1758.0">factory.abstract_factory.Garlic</node>
+    <node x="100.0" y="483.0">factory.abstract_factory.NYPizzaIngredientFactory</node>
+    <node x="985.0" y="1963.0">factory.abstract_factory.MarinaraSauce</node>
+    <node x="0.0" y="1758.0">factory.abstract_factory.Eggplant</node>
+    <node x="0.0" y="1963.0">factory.abstract_factory.MozzarellaCheese</node>
+    <node x="1783.0" y="1858.0">factory.abstract_factory.Pepperoni</node>
+    <node x="1783.0" y="1963.0">factory.abstract_factory.SlicedPepperoni</node>
+    <node x="1384.0" y="1963.0">factory.abstract_factory.ThinCrustDough</node>
+    <node x="339.0" y="1217.0">factory.abstract_factory.ClamPizza</node>
+    <node x="0.0" y="1217.0">factory.abstract_factory.PepperoniPizza</node>
+    <node x="569.0" y="799.0">factory.abstract_factory.Pizza</node>
+    <node x="1477.5" y="1858.0">factory.abstract_factory.Dough</node>
+  </nodes>
+  <notes>
+    <note x="206.0" y="0.0">
+      <node>factory.abstract_factory.PizzaIngredientFactory</node>
+      <value>抽象工厂定义了一个接口\n所有的具体工厂都必须实现此接口\n这个接口包含一组方法用来生产产品\n\n这是抽象的披萨原料工厂接口\n它定义了如何产生一个相关产品的家族\n这个家族包含了所有制作披萨的原料\n\n也正是因为我们需要创建一个产品家族(原料产品家族)\n所以我们把PizzaIngredientFactory实现为抽象工厂\n每个子类都使用其区域的供货商来实现这些原料</value>
+      <edge>
+        <point x="0.0" y="-87.5" />
+        <point x="0.0" y="104.0" />
+      </edge>
+    </note>
+    <note x="441.0" y="1367.0">
+      <node>factory.abstract_factory.Veggies</node>
+      <value>接口Veggies、Cheese、Clams、Sauce、Dough、Pepperoni\n对应的实现类\n就是纽约原料工厂和芝加哥原料工厂对应的实现\n比如蛤蜊\n纽约原料工厂的实现类是新鲜蛤蜊\n芝加哥原料工厂实现类是冰冻蛤蜊\n\n每个原料都代表着一个产品\n而这个产品是由抽象工厂的工厂方法产生的\n\n这些产品子类创建了一组平行的产品家族\n这里有纽约原料家族和芝加哥原料家族</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="113.0" />
+      </edge>
+    </note>
+    <note x="61.0" y="2063.0">
+      <node>factory.abstract_factory.PizzaTestDrive</node>
+      <value>测试类</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="1631.0" y="1367.0">
+      <node>factory.abstract_factory.PizzaStore</node>
+      <value>PizzaStore的实现为\"工厂方法\"\n因为我们需要根据区域变化创建产品\n通过工厂方法\n每个区域都有自己的具体工厂\n而这些区域工厂知道如何制作适合该区域的披萨</value>
+      <edge>
+        <point x="0.0" y="-39.5" />
+        <point x="0.0" y="50.0" />
+      </edge>
+    </note>
+    <note x="1334.0" y="1533.5">
+      <node>factory.abstract_factory.ChicagoPizzaStore</node>
+      <value>披萨店具体实例ChicagoPizzaStore\n是抽象工厂(PizzaIngredientFactory)的客户</value>
+      <edge>
+        <point x="-53.75" y="-27.5" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="286.5">
+      <node>factory.abstract_factory.NYPizzaIngredientFactory</node>
+      <value>纽约原料工厂\n\n每个具体子类都创建一个家族的产品\n纽约家族或者芝加哥家族\n这些负责在抽象工厂中创建产品的方法\n通常是以\"工厂方法\"来实现的</value>
+      <edge>
+        <point x="-60.5" y="-87.5" />
+        <point x="160.5" y="458.0" />
+        <point x="120.5" y="458.0" />
+        <point x="0.0" y="59.0" />
+      </edge>
+    </note>
+    <note x="518.5" y="703.0">
+      <node>factory.abstract_factory.Pizza</node>
+      <value>抽象类披萨的客户是\"披萨店\"\n他是披萨店的产品  披萨店依赖这个\"抽象\"类型</value>
+      <edge>
+        <point x="0.0" y="-184.0" />
+        <point x="0.0" y="23.0" />
+      </edge>
+    </note>
+    <note x="523.0" y="268.5">
+      <node>factory.abstract_factory.ChicagoPizzaIngredientFactory</node>
+      <value>芝加哥原料工厂\n这个具体工厂实现不同的产品家族\n要创建一个产品\n客户只要使用其中的一个\"工厂方法\"\n而完全不需要实例化任何产品对象\n\n这个具体披萨工厂负责生产披萨原料\n每个工厂都知道如何产生符合自己区域的正确对象</value>
+      <edge>
+        <point x="60.5" y="-87.5" />
+        <point x="619.75" y="458.0" />
+        <point x="676.0" y="458.0" />
+        <point x="0.0" y="77.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="factory.abstract_factory.ChicagoPizzaStore" target="factory.abstract_factory.PizzaStore">
+      <point x="53.75" y="-27.5" />
+      <point x="1599.5" y="1621.0" />
+      <point x="1723.75" y="1621.0" />
+      <point x="-53.75" y="39.5" />
+    </edge>
+    <edge source="factory.abstract_factory.Garlic" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="270.5" y="1728.0" />
+      <point x="596.7857142857142" y="1728.0" />
+      <point x="-47.71428571428578" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.MarinaraSauce" target="factory.abstract_factory.Sauce">
+      <point x="0.0" y="-27.5" />
+      <point x="1068.5" y="1938.0" />
+      <point x="1120.25" y="1938.0" />
+      <point x="-41.75" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.NYPizzaStore" target="factory.abstract_factory.PizzaStore">
+      <point x="0.0" y="-27.5" />
+      <point x="53.75" y="39.5" />
+    </edge>
+    <edge source="factory.abstract_factory.ThinCrustDough" target="factory.abstract_factory.Dough">
+      <point x="0.0" y="-27.5" />
+      <point x="1467.5" y="1938.0" />
+      <point x="1519.25" y="1938.0" />
+      <point x="-41.75" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.FreshClams" target="factory.abstract_factory.Clams">
+      <point x="0.0" y="-27.5" />
+      <point x="669.5" y="1938.0" />
+      <point x="721.25" y="1938.0" />
+      <point x="-41.75" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.CheesePizza" target="factory.abstract_factory.Pizza">
+      <point x="0.0" y="-52.5" />
+      <point x="1176.5" y="1187.0" />
+      <point x="742.25" y="1187.0" />
+      <point x="74.25" y="184.0" />
+    </edge>
+    <edge source="factory.abstract_factory.Eggplant" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="83.5" y="1718.0" />
+      <point x="572.9285714285714" y="1718.0" />
+      <point x="-71.57142857142856" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.ParmesanCheese" target="factory.abstract_factory.Cheese">
+      <point x="0.0" y="-27.5" />
+      <point x="457.5" y="1938.0" />
+      <point x="326.16666666666663" y="1938.0" />
+      <point x="55.66666666666663" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.ThickCrustDough" target="factory.abstract_factory.Dough">
+      <point x="0.0" y="-27.5" />
+      <point x="1654.5" y="1938.0" />
+      <point x="1602.75" y="1938.0" />
+      <point x="41.75" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.ClamPizza" target="factory.abstract_factory.Pizza">
+      <point x="0.0" y="-52.5" />
+      <point x="498.5" y="1197.0" />
+      <point x="643.25" y="1197.0" />
+      <point x="-24.75" y="184.0" />
+    </edge>
+    <edge source="factory.abstract_factory.BlackOlives" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="457.5" y="1738.0" />
+      <point x="620.6428571428571" y="1738.0" />
+      <point x="-23.85714285714289" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.Onion" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="1205.5" y="1718.0" />
+      <point x="716.0714285714286" y="1718.0" />
+      <point x="71.57142857142856" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.MozzarellaCheese" target="factory.abstract_factory.Cheese">
+      <point x="0.0" y="-27.5" />
+      <point x="83.5" y="1938.0" />
+      <point x="214.83333333333334" y="1938.0" />
+      <point x="-55.66666666666666" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.NYPizzaIngredientFactory" target="factory.abstract_factory.PizzaIngredientFactory">
+      <point x="60.5" y="-87.5" />
+      <point x="281.5" y="458.0" />
+      <point x="321.5" y="458.0" />
+      <point x="-60.5" y="87.5" />
+    </edge>
+    <edge source="factory.abstract_factory.FrozenClams" target="factory.abstract_factory.Clams">
+      <point x="0.0" y="-27.5" />
+      <point x="856.5" y="1938.0" />
+      <point x="804.75" y="1938.0" />
+      <point x="41.75" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.VeggiePizza" target="factory.abstract_factory.Pizza">
+      <point x="0.0" y="-52.5" />
+      <point x="837.5" y="1197.0" />
+      <point x="692.75" y="1197.0" />
+      <point x="24.75" y="184.0" />
+    </edge>
+    <edge source="factory.abstract_factory.RedPepper" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.PlumTomatoSauce" target="factory.abstract_factory.Sauce">
+      <point x="0.0" y="-27.5" />
+      <point x="1255.5" y="1938.0" />
+      <point x="1203.75" y="1938.0" />
+      <point x="41.75" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.PepperoniPizza" target="factory.abstract_factory.Pizza">
+      <point x="0.0" y="-52.5" />
+      <point x="159.5" y="1187.0" />
+      <point x="593.75" y="1187.0" />
+      <point x="-74.25" y="184.0" />
+    </edge>
+    <edge source="factory.abstract_factory.ChicagoPizzaIngredientFactory" target="factory.abstract_factory.PizzaIngredientFactory">
+      <point x="-60.5" y="-87.5" />
+      <point x="498.75" y="458.0" />
+      <point x="442.5" y="458.0" />
+      <point x="60.5" y="87.5" />
+    </edge>
+    <edge source="factory.abstract_factory.ReggianoCheese" target="factory.abstract_factory.Cheese">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.SlicedPepperoni" target="factory.abstract_factory.Pepperoni">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.Spinach" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="1018.5" y="1728.0" />
+      <point x="692.2142857142857" y="1728.0" />
+      <point x="47.714285714285666" y="27.5" />
+    </edge>
+    <edge source="factory.abstract_factory.Mushroom" target="factory.abstract_factory.Veggies">
+      <point x="0.0" y="-27.5" />
+      <point x="831.5" y="1738.0" />
+      <point x="668.3571428571428" y="1738.0" />
+      <point x="23.857142857142776" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9029126213592233" x="935.8602150537633" y="1656.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
