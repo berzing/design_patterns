@@ -7,9 +7,9 @@
 在多线程环境下  代码`uniqueInstance = new ChocolateBoiler()`会返回两个不同对象  
 
 多线程改善：  
-1. 将`getInstance()`变成同步(synchronized)方法  (如果应用程序对`getInstance()`性能要求不高的话)
+1. 将`getInstance()`变成同步(synchronized)方法  (如果应用程序对`getInstance()`性能要求不高的话)  
     这是最直接的方法  但是性能有点差
-2. 使用"急切"创建实例  而不使用"懒加载"
+2. 使用"急切"创建实例  而不使用"懒加载"  
     我们一定需要用到一个巧克力锅炉  所以静态的初始化实例并不是不可以  虽然这种做法有点陌生
 3. 使用"双重检查加锁"  在`getInstance()`中减少使用同步  
     可以帮我们大大减少`getInstance()`的时间耗费
