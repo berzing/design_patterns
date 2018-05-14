@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>command.remote.RemoteLoader</OriginalElement>
+  <nodes>
+    <node x="75.0" y="163.5">command.remote.Command</node>
+    <node x="12.0" y="582.0">command.remote.RemoteControl</node>
+    <node x="451.5" y="528.0">command.remote.Light</node>
+    <node x="748.5" y="564.0">command.remote.RemoteLoader</node>
+    <node x="0.0" y="300.0">command.remote.LightOffCommand</node>
+    <node x="273.75" y="300.0">command.remote.LightOnCommand</node>
+  </nodes>
+  <notes>
+    <note x="5.0" y="0.0">
+      <node>command.remote.Command</node>
+      <value>命令接口\n所有遥控器命令都会实现Command接口\n遥控器可以通过调用execute()\n执行厂商类(Light,CeilingFan)提供的动作</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="41.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="450.0">
+      <node>command.remote.RemoteControl</node>
+      <value>遥控器\n管理一组命令对象  每个按钮都有一个命令对象\n每当按下按钮  就调用相应的xxButtonWasPushed()方法\n因而execute()方法会被调用</value>
+      <edge>
+        <point x="0.0" y="-100.5" />
+        <point x="0.0" y="41.0" />
+      </edge>
+    </note>
+    <note x="415.0" y="450.0">
+      <node>command.remote.Light</node>
+      <value>厂商类  控制特定的家电自动化装置</value>
+      <edge>
+        <point x="0.0" y="-64.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="691.0" y="450.0">
+      <node>command.remote.RemoteLoader</node>
+      <value>测试遥控器\n创建命令对象  然后将其加载到遥控器的插槽中\n每个命令对象都封装了一项请求</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="32.0" />
+      </edge>
+    </note>
+    <note x="249.0" y="132.0">
+      <node>command.remote.LightOnCommand</node>
+      <value>利用Command接口  每个动作都被实现成简单命令对象\n命令对象持有一个厂商类的实例引用\n并实现了一个execute()方法\n这个方法会调用厂商类实例的一个或多个方法  完成特定的行为\n\n厂商类Light有两个动作：打开电灯和关闭电灯</value>
+      <edge>
+        <point x="56.25" y="-52.5" />
+        <point x="0.0" y="59.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="command.remote.LightOffCommand" target="command.remote.Command">
+      <point x="0.0" y="-52.5" />
+      <point x="-38.5" y="27.5" />
+    </edge>
+    <edge source="command.remote.LightOnCommand" target="command.remote.Command">
+      <point x="-56.25" y="-52.5" />
+      <point x="330.0" y="275.0" />
+      <point x="190.5" y="275.0" />
+      <point x="38.5" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="412.5" y="493.5" />
+  <SelectedNodes>
+    <node>command.remote.LightOnCommand</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
