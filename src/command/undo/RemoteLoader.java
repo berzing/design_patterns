@@ -9,6 +9,7 @@ public class RemoteLoader {
     public static void main(String[] args) {
         RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();
 
+        //=============电灯测试
         Light livingRoomLight = new Light("Living Room");
 
         LightOnCommand livingRoomLightOn =
