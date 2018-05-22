@@ -1,18 +1,16 @@
-package iterator.transition_1;
+package iterator.dinermerge_02;
 
 
 /**
  * 测试
  */
-public class MenuTestDriver {
+public class MenuTestDrive {
 
     public static void main(String[] args) {
-        //创建新菜单
         PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
         DinerMenu dinerMenu = new DinerMenu();
-
-        Waitress waitress = new Waitress(pancakeHouseMenu,dinerMenu);
-
+        CafeMenu cafeMenu = new CafeMenu();
+        Waitress waitress = new Waitress(pancakeHouseMenu,dinerMenu,cafeMenu);
         waitress.printMenu();
     }
 }

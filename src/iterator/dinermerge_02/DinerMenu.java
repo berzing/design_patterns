@@ -1,4 +1,4 @@
-package iterator.transition_1;
+package iterator.dinermerge_02;
 
 
 import java.util.Iterator;
@@ -6,13 +6,13 @@ import java.util.Iterator;
 /**
  * 餐厅菜单
  */
-public class DinerMenu {
+public class DinerMenu implements Menu{
 
-    static final int MAX_ITEMS = 6;
+    private static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
 
-    public DinerMenu() {
+    public DinerMenu(){
         menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("Vegetarian BLT",
@@ -32,22 +32,17 @@ public class DinerMenu {
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
-        MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
+        MenuItem menuItem = new MenuItem(name,description,vegetarian,price);
         if (numberOfItems >= MAX_ITEMS) {
-            System.err.println("Sorry, menu is full!  Can't add item to menu");
-        } else {
-            menuItems[numberOfItems] = menuItem;
-            numberOfItems = numberOfItems + 1;
+            System.err.println("sorry, menu is full! can't add item to menu");
+        }else {
+            menuItems[numberOfItems]=menuItem;
+            numberOfItems+=1;
         }
     }
 
-    /**
-     * 返回迭代器接口
-     * @return
-     */
-    public Iterator createIterator() {
+    @Override
+    public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(menuItems);
     }
-
-    // other menu methods here
 }

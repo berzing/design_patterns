@@ -1,4 +1,4 @@
-package iterator.transition_1;
+package iterator.dinermerge_02;
 
 
 /**
@@ -8,10 +8,14 @@ public class MenuItem {
 
     String name;
     String description;
-    boolean vegetarian;//素食主义者、素菜
+    boolean vegetarian;
     double price;
 
-    public MenuItem(String name, String description, boolean vegetarian, double price) {
+    public MenuItem(String name,
+                    String description,
+                    boolean vegetarian,
+                    double price)
+    {
         this.name = name;
         this.description = description;
         this.vegetarian = vegetarian;
@@ -30,12 +34,12 @@ public class MenuItem {
         return price;
     }
 
-    public boolean isVegetarian(){
+    public boolean isVegetarian() {
         return vegetarian;
     }
 
     @Override
     public String toString() {
-        return name+", "+price+" -- "+description+"\n";
+        return name+", "+price+" -- "+description;
     }
 }

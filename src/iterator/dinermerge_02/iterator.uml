@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>iterator.dinermerge_02.DinerMenu</OriginalElement>
+  <nodes>
+    <node x="735.0" y="534.0">iterator.dinermerge_02.MenuItem</node>
+    <node x="437.99999999999994" y="207.0">iterator.dinermerge_02.PancakeHouseMenu</node>
+    <node x="0.0" y="456.0">java.util.Iterator</node>
+    <node x="221.5" y="633.0">iterator.dinermerge_02.DinerMenuIterator</node>
+    <node x="801.0" y="183.0">iterator.dinermerge_02.DinerMenu</node>
+    <node x="643.9999999999999" y="78.0">iterator.dinermerge_02.Menu</node>
+    <node x="46.0" y="258.0">iterator.dinermerge_02.Waitress</node>
+    <node x="0.0" y="933.0">iterator.dinermerge_02.MenuTestDrive</node>
+  </nodes>
+  <notes>
+    <note x="870.5" y="456.0">
+      <node>iterator.dinermerge_02.MenuItem</node>
+      <value>菜单项</value>
+      <edge>
+        <point x="0.0" y="-88.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="498.99999999999994" y="91.5">
+      <node>iterator.dinermerge_02.PancakeHouseMenu</node>
+      <value>煎饼屋菜单</value>
+      <edge>
+        <point x="-85.75" y="-64.5" />
+        <point x="523.75" y="158.0" />
+        <point x="541.5" y="158.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="375.0" y="460.5">
+      <node>iterator.dinermerge_02.DinerMenuIterator</node>
+      <value>餐厅菜单迭代器\n因为数组不支持iterator()方法\n所以我们需要为餐厅菜单实现一个迭代器\n\n而煎饼屋菜单所使用的ArrayList里面内置迭代器\n我们直接调用ArrayList的iterator()方法就好</value>
+      <edge>
+        <point x="66.75" y="-88.5" />
+        <point x="421.75" y="608.0" />
+        <point x="532.5" y="608.0" />
+        <point x="0.0" y="59.0" />
+      </edge>
+    </note>
+    <note x="754.9999999999999" y="0.0">
+      <node>iterator.dinermerge_02.Menu</node>
+      <value>菜单接口</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="1001.25" y="91.5">
+      <node>iterator.dinermerge_02.DinerMenu</node>
+      <value>餐厅菜单</value>
+      <edge>
+        <point x="85.75" y="-88.5" />
+        <point x="1058.25" y="158.0" />
+        <point x="1037.25" y="158.0" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="0.0">
+      <node>iterator.dinermerge_02.Waitress</node>
+      <value>女服务员\n\n煎饼屋菜单和餐厅菜单的类都实现了Menu接口\n女服务员可以利用Menu接口(而不是具体类)引用每一个菜单对象\n这样女服务员就不会依赖具体菜单\n\n这个新的Menu接口有一个createIterator()方法\n此方法是由煎饼屋菜单和餐厅菜单实现的\n每个菜单类都必须负责提供适当的具体迭代器\n其中煎饼屋菜单所使用的ArrayList支持iterator()方法\n餐厅菜单使用的是数组  不支持iterator()方法</value>
+      <edge>
+        <point x="0.0" y="-76.5" />
+        <point x="0.0" y="104.0" />
+      </edge>
+    </note>
+    <note x="61.0" y="855.0">
+      <node>iterator.dinermerge_02.MenuTestDrive</node>
+      <value>测试类</value>
+      <edge>
+        <point x="0.0" y="-27.5" />
+        <point x="0.0" y="14.0" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="iterator.dinermerge_02.DinerMenu" target="iterator.dinermerge_02.Menu">
+      <point x="-85.75" y="-88.5" />
+      <point x="886.75" y="158.0" />
+      <point x="864.4999999999999" y="158.0" />
+      <point x="73.5" y="27.5" />
+    </edge>
+    <edge source="iterator.dinermerge_02.PancakeHouseMenu" target="iterator.dinermerge_02.Menu">
+      <point x="85.75" y="-64.5" />
+      <point x="695.25" y="158.0" />
+      <point x="717.4999999999999" y="158.0" />
+      <point x="-73.5" y="27.5" />
+    </edge>
+    <edge source="iterator.dinermerge_02.DinerMenuIterator" target="java.util.Iterator">
+      <point x="-66.75" y="-88.5" />
+      <point x="288.25" y="608.0" />
+      <point x="177.5" y="608.0" />
+      <point x="0.0" y="63.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9303571428571429" x="572.6344086021505" y="474.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
