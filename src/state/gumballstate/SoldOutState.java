@@ -1,5 +1,9 @@
 package state.gumballstate;
 
+
+/**
+ * 售罄(该状态啥都不能做除了填充糖果机)
+ */
 public class SoldOutState implements State {
 
     GumballMachine gumballMachine;

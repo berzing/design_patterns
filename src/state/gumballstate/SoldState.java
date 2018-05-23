@@ -1,6 +1,9 @@
 package state.gumballstate;
 
 
+/**
+ * 售出
+ */
 public class SoldState implements State {
 
     GumballMachine gumballMachine;

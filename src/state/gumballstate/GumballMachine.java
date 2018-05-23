@@ -6,12 +6,14 @@ package state.gumballstate;
  */
 public class GumballMachine {
 
+    //所有状态都是在构造器中创建并赋值的
     State soldOutState;
     State noQuarterState;
     State hasQuarterState;
     State soldState;
     State winnerState;
 
+    //这个实例变量现在持有一个状态对象  而不是一个整数
     State state = soldOutState;
     int count=0;
 
@@ -64,6 +66,7 @@ public class GumballMachine {
         this.state = state;
     }
 
+    //获取并返回一个状态对象
     public State getSoldOutState() {
         return soldOutState;
     }

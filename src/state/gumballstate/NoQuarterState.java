@@ -1,5 +1,9 @@
 package state.gumballstate;
 
+
+/**
+ * 没有25分
+ */
 public class NoQuarterState implements State {
 
     GumballMachine gumballMachine;
@@ -13,6 +17,7 @@ public class NoQuarterState implements State {
         gumballMachine.setState(gumballMachine.getHasQuarterState());
     }
 
+    //如果没有给钱  就不能要求退钱
     public void ejectQuarter() {
         System.out.println("You haven't inserted a quarter");
     }

@@ -1,5 +1,9 @@
 package state.gumballstate;
 
+
+/**
+ * 赢家
+ */
 public class WinnerState implements State {
 
     GumballMachine gumballMachine;
