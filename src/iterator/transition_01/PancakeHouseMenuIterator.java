@@ -1,4 +1,4 @@
-package iterator.transition_1;
+package iterator.transition_01;
 
 
 import java.util.ArrayList;
