@@ -4,6 +4,7 @@ package proxy.gumball;
 public class SoldOutState implements State {
 
     private static final long serialVersionUID = 2L;
+    //我们不希望整个糖果机都被序列化并随着State对象一起传送  所以我们使用transient说明一下
     transient GumballMachine gumballMachine;
 
     public SoldOutState(GumballMachine gumballMachine){
