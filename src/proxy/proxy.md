@@ -19,5 +19,5 @@ java在java.lang.reflect包中有自己的代理支持
 你不能像以前一样  把代码放在Proxy类中  因为Proxy不是你直接实现的  
 那么代码应该放在哪里？  
 放在`InvocationHandler`中  
-`InvocationHandler`的工作是相应代理的任何调用  
+`InvocationHandler`的工作是响应代理的任何调用  
 你可以把`InvocationHandler`想成是代理收到方法调用后  请求做实际工作的对象
